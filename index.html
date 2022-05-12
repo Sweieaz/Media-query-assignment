@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/6d684055b3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Desktop to mobile layout</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <ul class="nav">
+                <li class="link"><a href="#">Home</a></li>
+                <li class="link"><a href="#">About</a></li>
+                <li class="link"><a href="#">Blog</a></li>
+                <li class="link"><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="fill">
+            <div class="toolbar">
+                <h4 class="header">TOOLBAR</h4>
+                <ul class="tools">
+                    <li class="bar-1">
+                        <i class="fa-solid fa-folder"></i>Folder
+                    </li>
+                    <li class="bar">
+                        <i class="fa-solid fa-pen-to-square"></i>Edit
+                    </li>
+                    <li class="bar">
+                        <i class="fa-regular fa-rectangle-list"></i>View
+                    </li>
+                    <li class="bar">
+                        <i class="fa-solid fa-trash-can"></i>Delete
+                    </li>
+                </ul>
+            </div>
+            <div class="form">
+                <h4 class="header">Register</h4>
+                <form action="https://httpbin.org/get" method="get">
+                    <div class="filling ">
+                        <!-- firstname -->
+                        <label for="firstname">First name</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="First name" focus required />
+                        <!-- middlename -->
+                        <label for="middlename">Middle name</label>
+                        <input type="text" id="middlename" name="middlename" placeholder="Middle name" focus required />
+                        <!-- lastname -->
+                        <label for="lastname">Last name</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Last name" focus required />
+                        <!-- password -->
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password" required focus />
+                        <!-- email -->
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required focus="" />
+                        <!-- <label for="personalinfo">personalinfo</label> -->
+                        <textarea name="personalinfo" id="personalinfo" focus placeholder=" Personal Profile"
+                            required></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

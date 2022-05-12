@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
+.header {
+  font-weight: 500;
+  padding: 10px;
+}
+
+.navbar {
+  height: 120px;
+  background: #f2f2f2;
+  margin: 20px;
+  border: 2px solid black;
+  box-shadow: 2px 3px 3px 1px #adb5bd;
+  position: static;
+}
+
+.nav {
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: relative;
+  top: -10px;
+}
+
+.link {
+  height: 60px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: #ffff;
+}
+
+.link:nth-of-type(odd) {
+  background: #014f86;
+}
+
+.link:nth-of-type(even) {
+  background: #538d22;
+}
+.link:hover {
+  color: #ffff;
+  text-decoration: underline;
+  background: #f48c06;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: 0.5s linear;
+}
+
+.fill {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.toolbar {
+  background: #f2f2f2;
+  margin: 50px 20px 50px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  border-top-right-radius: 30px;
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  padding: 25px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(100, 120, 130);
+}
+
+.bar-1 {
+  padding: 25px;
+  list-style: none;
+  display: flex;
+  border-top: 1px solid rgb(100, 120, 130);
+  border-bottom: 1px solid rgb(100, 120, 130);
+}
+
+.bar:hover,
+.bar-1:hover {
+  background: #f8f9fa;
+}
+
+.fa-solid,
+.fa-regular {
+  padding-right: 10px;
+  color: #6c757d;
+}
+
+.form {
+  margin: 50px 20px 50px auto;
+  background: #f2f2f2;
+  width: 70%;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.filling {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 24% 22% 24%;
+  grid-template-rows: repeat(4, 35px);
+  grid-gap: 20px;
+  grid-template-areas:
+    "firstname middlename lastname"
+    "passlabel passwordfield passwordfield"
+    "emaillabel emailfield emailfield"
+    "textarea textarea textarea";
+}
+
+label[for="firstname"] {
+  display: none;
+}
+
+input[name="firstname"] {
+  grid-area: firstname;
+}
+
+label[for="middlename"] {
+  display: none;
+}
+
+input[name="middlename"] {
+  grid-area: middlename;
+}
+
+label[for="lastname"] {
+  display: none;
+}
+
+input[name="lasstname"] {
+  grid-area: lastname;
+}
+
+label[for="password"] {
+  grid-area: passlabel;
+}
+
+input[name="password"] {
+  grid-area: passwordfield;
+}
+
+label[for="email"] {
+  grid-area: emaillabel;
+}
+
+input[name="email"] {
+  grid-area: emailfield;
+  background: #dee2e6;
+}
+
+textarea[name="personalinfo"] {
+  grid-area: textarea;
+  border-radius: 15px;
+  padding: 20px;
+  height: 100px;
+}
+
+#email,
+#password {
+  display: inline-block;
+  text-align: left;
+  border-radius: 10px;
+}
+
+input[name="email"]:focus {
+  border-color: #000;
+}
+
+::placeholder {
+  color: #d00000;
+  padding-left: 5px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none !important;
+  border-color: #7ebce6;
+}
+
+#firstname,
+#middlename,
+#lastname {
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+    border: none;
+    background: none;
+    box-shadow: none;
+    height: unset;
+    position: unset;
+    margin-bottom: 4px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: unset;
+    position: unset;
+  }
+
+  .link {
+    height: 80px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: unset;
+    margin-bottom: 4px;
+    padding-left: 20px;
+    justify-content: center;
+  }
+
+  .link:hover {
+    color: #ffff;
+    text-decoration: underline;
+    background: #f48c06;
+    border-top-left-radius: unset;
+    border-bottom-right-radius: unset;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: 0.5s linear;
+  }
+
+  .fill {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toolbar {
+    margin: 6px 20px 10px 20px;
+    width: auto;
+    border-top-right-radius: 50px;
+  }
+
+  .bar-1 .bar {
+    padding: 20px;
+  }
+
+  .form {
+    margin: 10px 20px 10px 20px;
+    padding: 10px;
+    background: #f2f2f2;
+    width: auto;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .filling {
+    padding-top: 10px;
+    padding-left: 20px;
+    display: grid;
+    justify-content: unset;
+    grid-template-columns: 25% 50%;
+    grid-template-rows: repeat(5, 35px);
+    grid-gap: 10px;
+    grid-template-areas:
+      "firstname firstfield"
+      "middlename middlefield"
+      "lastname lastfield"
+      "passlabel passwordfield"
+      "emaillabel emailfield";
+  }
+
+  label[for="firstname"] {
+    grid-area: firstname;
+    display: contents;
+  }
+
+  input[name="firstname"] {
+    grid-area: firstfield;
+    height: 30px;
+  }
+
+  label[for="middlename"] {
+    grid-area: middlename;
+    display: contents;
+  }
+
+  input[name="middlename"] {
+    grid-area: middlefield;
+    height: 30px;
+  }
+
+  label[for="lastname"] {
+    grid-area: lastname;
+    display: contents;
+  }
+
+  input[name="lasstname"] {
+    grid-area: lastfield;
+    height: 30px;
+  }
+
+  label[for="password"] {
+    grid-area: passlabel;
+  }
+
+  input[name="password"] {
+    grid-area: passwordfield;
+    height: 30px;
+  }
+
+  label[for="email"] {
+    grid-area: emaillabel;
+  }
+
+  input[name="email"] {
+    grid-area: emailfield;
+    background: #dee2e6;
+    height: 30px;
+  }
+
+  textarea[name="personalinfo"] {
+    grid-area: textarea;
+    border-radius: 15px;
+    padding: 20px;
+    height: 100px;
+    display: none;
+  }
+  ::placeholder {
+    color: transparent;
+    padding-left: 5px;
+  }
+}
