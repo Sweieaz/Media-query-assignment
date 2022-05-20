@@ -333,7 +333,8 @@ textarea:focus {
     background: #dee2e6;
   }
 
-  textarea[name="personalinfo"] {
+  textarea[name="personalinfo"],
+  label[for="personalinfo"] {
     grid-area: textarea;
     border-radius: 15px;
     padding: 20px;
