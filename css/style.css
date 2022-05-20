@@ -341,6 +341,7 @@ textarea:focus {
     height: 100px;
     display: none;
   }
+
   ::placeholder {
     color: transparent;
     padding-left: 5px;
