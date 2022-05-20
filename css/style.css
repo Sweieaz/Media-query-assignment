@@ -22,7 +22,7 @@ body {
   height: 120px;
   background: #f2f2f2;
   margin: 20px;
-  border: 2px solid black;
+  border: 2px solid rgb(8, 7, 7);
   box-shadow: 2px 3px 3px 1px #adb5bd;
   position: static;
 }
@@ -58,8 +58,8 @@ a {
 .link:nth-of-type(even) {
   background: #538d22;
 }
+
 .link:hover {
-  color: #ffff;
   text-decoration: underline;
   background: #f48c06;
   border-top-left-radius: 10px;
@@ -135,7 +135,7 @@ a {
     "textarea textarea textarea";
 }
 
-label[for="firstname"] {
+.label {
   display: none;
 }
 
@@ -143,16 +143,8 @@ input[name="firstname"] {
   grid-area: firstname;
 }
 
-label[for="middlename"] {
-  display: none;
-}
-
 input[name="middlename"] {
   grid-area: middlename;
-}
-
-label[for="lastname"] {
-  display: none;
 }
 
 input[name="lasstname"] {
@@ -185,8 +177,6 @@ textarea[name="personalinfo"] {
 
 #email,
 #password {
-  display: inline-block;
-  text-align: left;
   border-radius: 10px;
 }
 
@@ -201,7 +191,7 @@ input[name="email"]:focus {
 
 input:focus,
 textarea:focus {
-  outline: none !important;
+  outline: none;
   border-color: #7ebce6;
 }
 
@@ -220,6 +210,7 @@ textarea:focus {
     height: unset;
     position: unset;
     margin-bottom: 4px;
+    margin-top: 10px;
   }
 
   .nav {
@@ -293,34 +284,36 @@ textarea:focus {
       "emaillabel emailfield";
   }
 
+  .label {
+    display: contents;
+  }
+
+  input {
+    height: 30px;
+  }
+
   label[for="firstname"] {
     grid-area: firstname;
-    display: contents;
   }
 
   input[name="firstname"] {
     grid-area: firstfield;
-    height: 30px;
   }
 
   label[for="middlename"] {
     grid-area: middlename;
-    display: contents;
   }
 
   input[name="middlename"] {
     grid-area: middlefield;
-    height: 30px;
   }
 
   label[for="lastname"] {
     grid-area: lastname;
-    display: contents;
   }
 
   input[name="lasstname"] {
     grid-area: lastfield;
-    height: 30px;
   }
 
   label[for="password"] {
@@ -329,7 +322,6 @@ textarea:focus {
 
   input[name="password"] {
     grid-area: passwordfield;
-    height: 30px;
   }
 
   label[for="email"] {
@@ -339,7 +331,6 @@ textarea:focus {
   input[name="email"] {
     grid-area: emailfield;
     background: #dee2e6;
-    height: 30px;
   }
 
   textarea[name="personalinfo"] {
